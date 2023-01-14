@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    
+    <h:head>
+        <title>signup</title>
+        <link rel="stylesheet" href="styles.css"></link>
+    </h:head>
+    <h:body>
+       <div class="header">
+            <div class="header1">
+                <h2 class="shoesifytext">Shoesify</h2>
+            </div>
+            <div class="header2">
+                <a class="anchor-link" href="">login</a>
+            </div>
+         </div>
+        <div class="loginbody">
+            <div class="imgdiv">
+                <img class="img2" src="folder/images/wallpaperflare.com_wallpaper (49).jpg"></img> 
+            </div>
+            <div class="inputfname2">
+                <fieldset class="fieldset1">
+                    
+                    <h:form>
+                        <label class="text">Login</label>
+                        <br></br>
+                         <label  class="username">Email address</label>                        
+                        <h:inputText id="input1" class="input1" />
+                         <br></br>
+                        <label  class="username">credit-card no:</label>                        
+                        <h:inputText id="input2" class="input1" />
+                         <br></br>                    
+                        <label  class="username">address</label>                        
+                        <h:inputText id="input3" class="input1" />
+                         <br></br>  
+                         <label  class="username">gender:</label> 
+                         <h:selectOneRadio class="text2">                        
+                        <f:selectItem itemValue="male" itemLabel="male" />
+   			<f:selectItem itemValue="female" itemLabel="female" />
+   		       </h:selectOneRadio>
+                         <br></br>
+                         
+                        <label  class="username">credit-card password:</label>                         
+                        <h:inputSecret class="input4" maxlength="12" ></h:inputSecret> 
+                        <br></br>
+                        <label  class="username">username:</label>                         
+                        <h:inputText id="input5" class="input1" />
+                         <br></br>
+                        <label  class="username">username:</label>                         
+                        <h:inputText id="input6" class="input1" />
+                         <br></br>
+                        <label class="username">password:</label>                         
+                        <h:inputSecret class="input7" maxlength="12"></h:inputSecret>
+                         <br></br>
+                        <h:commandButton class="sbmtbtn" value="Sign Up"/>  
+                    </h:form> 
+                </fieldset>
+               
+            </div>
+        </div>
+         <div class="footer2">
+            <div class="anchor-links">
+                
+                <a class="anchor-link" href="https://twitter.com/">twitter</a>
+                <a class="anchor-link" href="https://www.instagram.com/">instagram</a>
+                <a class="anchor-link" href="https://www.facebook.com/">facebook</a>
+              
+            </div>
+            <div class="footfooter">
+                <h4>@2023 copyrights reserved</h4>
+            </div>
+        </div>
+    </h:body>
+</html>
+
