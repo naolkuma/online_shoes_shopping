@@ -26,9 +26,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
                 
             }
             .header2{
-                 
+             
                  display: flex;
-                 margin-top: 20px;
+                 padding-top: 32px;
             }
             .home-btn{
                 margin-right: 10px;
@@ -37,7 +37,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
             .home-body{
                 display: flex;
                 flex-direction: row-reverse;
-                
+                margin: 0;
+                padding: 0;
                
                 
             }
@@ -58,7 +59,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
             .title{
                 
                 display: flex;
-                justify-content: right;
+                justify-content: left;
                 color: red;
                 font-family: 'Monteserrat', sans-serif;
                 font-size: 2.5rem;
@@ -136,7 +137,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-  width: 50px;
 }
 
 .btn:hover {
@@ -171,6 +171,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     margin: auto 20px;
 }
 .text{
+    
     position: relative;
     margin-bottom: 40px;
    color: white;
@@ -179,6 +180,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     left:40px;
 }
 .shoesifytext{
+    display: flex;
+    justify-content: center;
     font-size: 2rem;
     font-family: 'Monteserrat', sans-serif;
 }
@@ -203,11 +206,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     
     
 }
+
 .inputfname{
     border-radius: 10px;
     padding: 0;
     position: absolute;
     display: flex;
+    align-content: right;
     background-color: black;
    opacity: 0.8;
     z-index: 1;
@@ -226,6 +231,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 .fieldset1{
     display: flex;
     flex-direction: row;
+    
     border-width: 0.5px;
     border-radius: 10px;
     padding-top: 10px;
@@ -279,5 +285,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     left: 100px;
     color:white;
 }
+
 
 

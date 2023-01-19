@@ -16,7 +16,7 @@
                 <h2 class="shoesifytext">Shoesify</h2>
             </div>
             <div class="header2">
-                <a class="anchor-link" href="">login</a>
+                <a class="anchor-link" href="index.xhtml">home</a>
             </div>
          </div>
         <div class="loginbody">
@@ -27,37 +27,36 @@
                 <fieldset class="fieldset1">
                     
                     <h:form>
-                        <label class="text">Login</label>
+                        <label class="text">Register</label>
                         <br></br>
                          <label  class="username">Email address</label>                        
-                        <h:inputText id="input1" class="input1" />
+                         <h:inputText id="input1" class="input1" value="#{insertreg.email}"/>
                          <br></br>
                         <label  class="username">credit-card no:</label>                        
-                        <h:inputText id="input2" class="input1" />
-                         <br></br>                    
-                        <label  class="username">address</label>                        
-                        <h:inputText id="input3" class="input1" />
+                        <h:inputText id="input2" class="input1" value="#{insertreg.creditcardno}"/>
+                         <br></br>  
+                         <label  class="username">credit-card password:</label>                         
+                        <h:inputSecret class="input1" maxlength="12" ></h:inputSecret> 
+                        <br></br>
+                        <label  class="username">address:</label>                        
+                        <h:inputText id="input3" class="input1" value="#{insertreg.address}"/>
                          <br></br>  
                          <label  class="username">gender:</label> 
-                         <h:selectOneRadio class="text2">                        
+                         <h:selectOneRadio class="text2" value="#{insertreg.gender}">                        
                         <f:selectItem itemValue="male" itemLabel="male" />
    			<f:selectItem itemValue="female" itemLabel="female" />
    		       </h:selectOneRadio>
                          <br></br>
-                         
-                        <label  class="username">credit-card password:</label>                         
-                        <h:inputSecret class="input4" maxlength="12" ></h:inputSecret> 
-                        <br></br>
-                        <label  class="username">username:</label>                         
-                        <h:inputText id="input5" class="input1" />
+                        <label  class="username">phone number:</label>                         
+                        <h:inputText id="input5" class="input1" value="#{insertreg.phoneno}"/>
                          <br></br>
                         <label  class="username">username:</label>                         
-                        <h:inputText id="input6" class="input1" />
+                        <h:inputText id="input6" class="input1" value="#{insertreg.username}"/>
                          <br></br>
                         <label class="username">password:</label>                         
-                        <h:inputSecret class="input7" maxlength="12"></h:inputSecret>
+                        <h:inputSecret class="input1" maxlength="12" value="#{insertreg.password}"></h:inputSecret>
                          <br></br>
-                        <h:commandButton class="sbmtbtn" value="Sign Up"/>  
+                         <h:commandButton class="sbmtbtn" value="Sign Up" action="#{insertreg.addUser}"/>  
                     </h:form> 
                 </fieldset>
                

@@ -13,7 +13,7 @@
                 <h2 class="shoesifytext">Shoesify</h2>
             </div>
             <div class="header2">
-                <a class="anchor-link" href="">login</a>
+                <a class="anchor-link" href="index.xhtml">home</a>
             </div>
          </div>
         <div class="loginbody">
@@ -25,12 +25,12 @@
                     
                     <h:form>
                         <label  class="username">username:</label>
-                        <h:inputText id="inputuser" class="input1"></h:inputText>
+                        <h:inputText id="inputuser" class="input1" value="#{loginBean.username1}"></h:inputText>
                     <br></br>
                     <label class="username">password:</label>
-                    <h:inputSecret id="inputpass" class="input1"></h:inputSecret>
+                    <h:inputSecret id="inputpass" class="input1" value="#{loginBean.password1}"></h:inputSecret>
                     <br></br>
-                    <h:commandButton class="sbmtbtn" value="login"/>  
+                    <h:commandButton class="sbmtbtn" value="login" action="#{loginBean.validatingUsers()}"/>  
                 </h:form> 
                 </fieldset>
                
