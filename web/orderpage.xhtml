@@ -5,6 +5,79 @@
     <h:head>
         <title>orderpage</title>
          <link rel="stylesheet" href="styles.css"></link>
+        
+         <style>
+             .Orderbody{
+                 padding: 0px;
+                 background-color: white;
+                background: linear-gradient(whitesmoke,darkgrey);
+             }
+             .prods{
+                 display: flex;
+                 justify-content: space-evenly;
+                 align-content: space-evenly;
+                 
+             }
+             .pro{
+                 
+background: linear-gradient(lightgray);
+                 
+                 display: flex;
+                 
+                 flex-direction: column;
+                 border-radius: 20px;
+                 justify-content: center;
+                 align-content: center;
+             }
+             .pro:hover{
+                 border: 1px;
+             }
+             .orderh{
+                 color: black;
+                 
+             }
+             .formms{
+                 padding: 40px;
+             }
+             .pimg{
+                 border-radius: 20px;
+             }
+             .carddes{
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-content: center;
+                 width: 300px;
+             }
+             h4 b { 
+                 font-family: cursive;
+                 font-size: 1.3rem;
+                 padding: 0;
+                 margin: 10px 0;
+             }
+             
+             .btn1 {
+  -webkit-border-radius: 22;
+  -moz-border-radius: 22;
+  border-radius: 22px;
+  -webkit-box-shadow: 5px 6px 7px #666666;
+  -moz-box-shadow: 5px 6px 7px #666666;
+  box-shadow: 5px 6px 7px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #000000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 150px;
+  height: 50px;
+}
+
+.btn1:hover {
+  background: #fc3c3c;
+  text-decoration: none;
+}
+         </style>
     </h:head>
     <h:body>
          <div class="header">
@@ -19,27 +92,149 @@
          </div>
         <div class="Orderbody">
 
-            
-            
-            <-<!-- the b ody  where all products will be  -->
-            
-            
-            
-            
-        </div>
-        <div class="footer">
-            <div class="anchor-links">
+           
+            <div>
+                <h1 class="orderh">look and buy what you desire</h1>
+            </div>
+            <h:form class="formms">
+                <div class="prods">
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/Jumpmantwotrey.jpg" width="300px" height="450px" alt="alt"/>
+                   <div class="carddes">
+                          
+                          <h4><b>Jump man two trey</b></h4>
+                          <h4>41</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                        
+                </div>
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/nikeairforce.jpg" width="300px" height="450px" alt="alt"/>
+                    <div class="carddes">
+                          
+                          <h4><b>Nike air force</b></h4>
+                          <h4>41</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/KDtrey5.jpg" width="300px" height="450px" alt="alt"/>
+                     
+                        <div class="carddes">
+                          
+                          <h4><b>KD trey 5</b></h4>
+                          <h4>41</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                </div>
                 
-                <a class="anchor-link" href="https://twitter.com/">twitter</a>
-                <a class="anchor-link" href="https://www.instagram.com/">instagram</a>
-                <a class="anchor-link" href="https://www.facebook.com/">facebook</a>
-              
-            </div>
-            <div class="footfooter">
-                <h4>@2023 copyrights reserved</h4>
-            </div>
+                    </div>
+            </h:form>
+            
+            <h:form class="formms">
+                <div class="prods">
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/nikeairjordandub.jpg" width="300px" height="450px" alt="alt"/>
+                    
+                   <div class="carddes">
+                          
+                          <h4><b>Nike air Jordan Dub</b></h4>
+                          <h4>41</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/nikeairjordanxxvii.jpg" width="300px" height="450px" alt="alt"/>
+                     
+                       <div class="carddes">
+                          
+                          <h4><b>Nike Air Jordan XXVII</b></h4>
+                          <h4>41</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/nikeairmaxplus.jpg" width="300px" height="450px" alt="alt"/>
+                     
+                       <div class="carddes">
+                          
+                          <h4><b>Nike Air Max Plus</b></h4>
+                          <h4>41</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                </div>
+                
+                    </div>
+            </h:form>
+            
+            <h:form class="formms">
+                <div class="prods">
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/nikefreemetcon.jpg" width="300px" height="450px" alt="alt"/>
+                    
+                       <div class="carddes">
+                          
+                          <h4><b>Nike Free Metcon</b></h4>
+                          <h4>41</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/nikeinvincible.jpg" width="300px" height="450px" alt="alt"/>
+                     
+                      <div class="carddes">
+                          
+                          <h4><b>Nike Invincible</b></h4>
+                          <h4>41</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img class="pimg" src="folder/images/shoesimg/nikepegasus39.jpg" width="300px" height="450px" alt="alt"/>
+                     
+                        <div class="carddes">
+                          
+                          <h4><b>Nike Pegasus</b></h4>
+                          <h4>41</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
+                    
+                    
+                   <h:commandButton class="btn1" value="Add To Cart"/>
+                    </div>
+                </div>
+                
+                    </div>
+            </h:form>
+            
+                
+            
+            
+            
         </div>
-      
         
     </h:body>
 </html>
