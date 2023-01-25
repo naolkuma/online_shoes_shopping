@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>admin retrive table</title>
+        
+        
+        
+        
+        <style>
+              body{
+                background-image: url("image/mickshoe.jpg");
+                background-size: 100%
+            }
+                  td{
+                margin: 20px;
+                
+                padding: 20px;
+                background-color: bisque;
+            }
+             
+            th{
+                background-color: goldenrod;
+                margin: 20px;
+                
+                padding: 20px;
+            } 
+            .ADMINPAGE{
+                width: 100%;
+            }
+          
+        </style>
+    </h:head>
+    <h:body>
+        <h:dataTable id="ADMINTABLE" class="ADMINPAGE" value="#{retrival.getUsers()}" var="data">
+            
+              <h:column>
+                <f:facet name="header">
+                    username  
+                </f:facet>
+                <h:outputText value="#{data.username}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                   passw
+                </f:facet>
+                <h:outputText value="#{data.passw}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                    email
+                </f:facet>
+                <h:outputText value="#{data.email}"/>  
+
+            </h:column>  
+            <h:column>
+                <f:facet name="header">
+                   creditCardno
+                </f:facet>
+                <h:outputText value="#{data.creditCardno}"/>  
+
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                   address
+                </f:facet>
+                <h:outputText value="#{data.address}"/>  
+
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                   gender
+                </f:facet>
+                <h:outputText value="#{data.gender}"/>  
+
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                   phoneno
+                </f:facet>
+                <h:outputText value="#{data.phoneno}"/>  
+
+            </h:column>
+      
+        </h:dataTable>
+    </h:body>
+</html>

@@ -9,21 +9,38 @@ import javax.faces.context.FacesContext;
 
 @ManagedBean
 public class LoginBean {
-    private String username1;
+    private String username;
     private String password1;
-    private String msg;
+    private String address;
+    private String order;
     
     
     public LoginBean(){
     
     }
 
-    public String getUsername1() {
-        return username1;
+    public String getAddress() {
+        return address;
     }
 
-    public void setUsername1(String username1) {
-        this.username1 = username1;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getOrder() {
+        return order;
+    }
+
+    public void setOrder(String order) {
+        this.order = order;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username1) {
+        this.username = username1;
     }
 
     public String getPassword1() {
@@ -33,14 +50,31 @@ public class LoginBean {
     public void setPassword1(String password1) {
         this.password1 = password1;
     }
+    public void addOrder() throws ClassNotFoundException, SQLException{
     
+         DbConnection orders = new DbConnection();
+        Connection con=orders.connMethod();
+        
+            try{
+               String sql = "Insert into JSFORDER(USERNAME, ADDRESS, ORDER) values(?, ?, ?)";
+            PreparedStatement mystmn = con.prepareStatement(sql); 
+            mystmn.setString(1, username);
+            mystmn.setString(2, address);
+            mystmn.setString(3, order);
+            
+            mystmn.execute();
+            }
+            catch (Exception e) {
+        }
+        
+    }
     public String validatingUsers() throws SQLException, ClassNotFoundException{
-        boolean validator= LoginValidator.validator(username1, password1);
+        boolean validator= LoginValidator.validator(username, password1);
                 if(validator){
                 DbConnection insreg=new DbConnection();
         Connection con=insreg.connMethod();
         PreparedStatement mystmn=con.prepareStatement("select * from JSFTABLE where USERNAME=?");
-        mystmn.setString(1, username1);
+        mystmn.setString(1, username);
         ResultSet rs = mystmn.executeQuery();
             rs.next();
             String uservalid=rs.getString(1);
