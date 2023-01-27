@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>order data</title>
+        <style>
+             tr:nth-child(even) {background-color: #f2f2f2;}
+            .orderdat{
+                width: 100%;
+                
+            } 
+            body{
+                background-image: url("folder/images/mickshoe.jpg");
+                background-size: 100%;
+            }
+                  td{
+                margin: 20px;
+                
+                padding: 10px;
+                background-color: lightgray;
+            }
+             
+            th{
+                background-color: #EB1D36;
+                margin: 20px;
+                
+                padding: 10px;
+            }
+            
+        </style>
+    </h:head>
+    <h:body>
+        <h:dataTable class="orderdat" value="#{orderRetrival.getOrders()}" var="data">
+            
+              <h:column>
+                <f:facet name="header">
+                    username  
+                </f:facet>
+                <h:outputText value="#{data.username}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                   address
+                </f:facet>
+                  <h:outputText value="#{data.address}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                    orders
+                </f:facet>
+                <h:outputText value="#{data.orders}"/>  
+
+            </h:column>
+             </h:dataTable>
+    </h:body>
+</html>
+

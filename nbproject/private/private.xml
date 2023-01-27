@@ -2,6 +2,25 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/web/newjsf.xhtml</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/InsertOrder.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/Ordertable.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/Retrival.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/web/index.xhtml</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/DbConnection.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/web/orderpage.xhtml</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/web/orderdata.xhtml</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/UserTable.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/web/userdata.xhtml</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/OrderRetrival.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/LoginValidator.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/web/signup.xhtml</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/LoginBean.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/Insertreg.java</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/web/styles.css</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/web/adminpage.xhtml</file>
+            <file>file:/C:/Users/Naol/Documents/NetBeansProjects/FinalProjectNao/src/java/Order.java</file>
+        </group>
     </open-files>
 </project-private>

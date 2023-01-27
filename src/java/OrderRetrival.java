@@ -15,30 +15,27 @@ import javax.faces.bean.ManagedBean;
  * @author Naol
  */
 @ManagedBean
-public class Retrival {
-    public List <UserTable> UserInfo;
-    public List <UserTable> getUsers(){
-    UserInfo=new ArrayList<>();
-    
+public class OrderRetrival {
+     public List <Ordertable> Orderinfo;
+    public List <Ordertable> getOrders(){
+    Orderinfo=new ArrayList<>();
+     
     try{
     DbConnection gettin=new DbConnection();
         Connection con=gettin.connMethod();
         
-        ResultSet results=con.createStatement().executeQuery("select * from JSFTABLE ");
+        ResultSet results=con.createStatement().executeQuery("select * from ORDERTABLE ");
         while(results.next()){
         String username=results.getString("USERNAME");
-        String passw=results.getString("PASSWORD");
-        String email=results.getString("EMAIL_ADDRESS");
-        String creditCardno=results.getString("CREDIT_CARD_NO");
         String address=results.getString("ADDRESS");
-        String gender=results.getString("GENDER");
-        String phoneno=results.getString("PHONE_NUMBER");
+        String orders=results.getString("ORDERS");
+        
       
-        UserInfo.add(new UserTable(username,passw,email,creditCardno,address,gender,phoneno));
+        Orderinfo.add(new Ordertable(username,address,orders));
         }
         
     }
     catch(Exception e){}
-        return UserInfo;
+        return Orderinfo;
     }
 }
