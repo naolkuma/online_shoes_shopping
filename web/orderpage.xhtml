@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>orderpage</title>
+        <title>order page</title>
          <link rel="stylesheet" href="styles.css"></link>
         
          <style>
@@ -77,6 +78,34 @@ background: linear-gradient(lightgray);
   background: #fc3c3c;
   text-decoration: none;
 }
+#naol{
+    display: none;
+}
+#naol1{
+    display: none;
+}
+#naol2{
+    display: none;
+}
+#naol3{
+    display: none;
+}
+#naol4{
+    display: none;
+}
+#naol5{
+    display: none;
+}
+#naol6{
+    display: none;
+}
+#naol7{
+    display: none;
+}
+#naol8{
+    display: none;
+}
+
          </style>
     </h:head>
     <h:body>
@@ -85,9 +114,7 @@ background: linear-gradient(lightgray);
                 <h2 class="shoesifytext">Shoesify</h2>
             </div>
             <div class="header2">
-                <a class="anchor-link" href="">contact</a>
-                <a class="anchor-link" href="">about</a>
-                <a class="anchor-link" href="">help</a>
+                <a class="anchor-link" href="index.xhtml">log out</a> 
             </div>
          </div>
         <div class="Orderbody">
@@ -103,12 +130,31 @@ background: linear-gradient(lightgray);
                     
                    <div class="carddes">
                        
-                       <h4><b>jump two trey</b></h4>
-                          <h4>41</h4>
+                       <h4><b>Jump Man Two Trey     3500birr</b></h4>
+                       <div id="naol">
+                      
+                      
+                          <h:selectOneRadio value="#{orders.shoe}">                        
+                        
+                        <f:selectItem itemValue="Jump man trey 41" itemLabel="41"/>
+                        <f:selectItem itemValue="Jump man trey 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                           <label  class="usernamey">username:</label>
+                        <h:inputText  class="input1" value="#{orders.username1}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.address}"></h:inputText>
+                        <br></br>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.addOrders()}"/>
+                       
+                                
+                       </div>
+                       
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                        <h:commandButton class="btn1" value="add to cart" action="#{order.addOrder()}"/>
+                        <p class="btn1" onclick="mynaol()">buy</p>
+                        
                     </div>
                         
                 </div>
@@ -116,12 +162,30 @@ background: linear-gradient(lightgray);
                     <img class="pimg" src="folder/images/shoesimg/nikeairforce.jpg" width="300px" height="450px" alt="alt"/>
                     <div class="carddes">
                           
-                          <h4><b>Nike air force</b></h4>
-                          <h4>41</h4>
+                          <h4><b>Nike air force      3300birr</b></h4>
+                          <div id="naol1">
+                      
+                       
+                          
+                           <label  class="usernamey">username:</label>
+                        <h:inputText  class="input1" value="#{orders.usertwo}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.addresstwo}"></h:inputText>
+                        <br></br>
+                        <h:selectOneRadio value="#{orders.shoetwo}">                        
+                        
+                        <f:selectItem itemValue="Nike Air Force 41" itemLabel="41"/>
+                        <f:selectItem itemValue="Nike Air Force 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.thrid()}"/>
+                      
+                                
+                       </div>
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                   <h:commandButton class="btn1" value="Add To Cart"/>
+                   <p class="btn1" onclick="mynaol1()">buy</p>
                     </div>
                 </div>
                 <div class="pro">
@@ -129,31 +193,65 @@ background: linear-gradient(lightgray);
                      
                         <div class="carddes">
                           
-                          <h4><b>KD trey 5</b></h4>
-                          <h4>41</h4>
+                          <h4><b>KD trey          5000birr</b></h4>
+                          <div id="naol2">
+                      
+                      
+                          <h:selectOneRadio value="#{orders.shoethree}">                        
+                        
+                        <f:selectItem itemValue="KD Tey 41" itemLabel="41"/>
+                        <f:selectItem itemValue="KD Trey 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                           <label  class="usernamey">username:</label>
+                        <h:inputText  class="input1" value="#{orders.userthree}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.addressthree}"></h:inputText>
+                        <br></br>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.fourth()}"/>
+                      
+                                
+                       </div>
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                   <h:commandButton class="btn1" value="Add To Cart"/>
+                   <p class="btn1" onclick="mynaol2()">buy</p>
                     </div>
                 </div>
                 
                     </div>
-            </h:form>
             
-            <h:form class="formms">
+            
+          
                 <div class="prods">
                 <div class="pro">
                     <img class="pimg" src="folder/images/shoesimg/nikeairjordandub.jpg" width="300px" height="450px" alt="alt"/>
                     
                    <div class="carddes">
                           
-                          <h4><b>Nike air Jordan Dub</b></h4>
-                          <h4>41</h4>
+                          <h4><b>Nike air Jordan Dub     4000birr</b></h4>
+                          <div id="naol3">
+                      
+                      
+                          <h:selectOneRadio value="#{orders.shoefour}">                        
+                        
+                        <f:selectItem itemValue="Nike Air Jordan 41" itemLabel="41"/>
+                        <f:selectItem itemValue="Nike Air Jordan 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                           <label  class="usernamey">username:</label>
+                           <h:inputText  class="input1" value="#{orders.userfour}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.addressfour}"></h:inputText>
+                        <br></br>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.fifth()}"/>
+                      
+                                
+                       </div>
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                   <h:commandButton class="btn1" value="Add To Cart"/>
+                   <p class="btn1" onclick="mynaol3()">buy</p>
                     </div>
                 </div>
                 <div class="pro">
@@ -161,12 +259,29 @@ background: linear-gradient(lightgray);
                      
                        <div class="carddes">
                           
-                          <h4><b>Nike Air Jordan XXVII</b></h4>
-                          <h4>41</h4>
+                          <h4><b>Nike Air Jordan XXVII      3400birr</b></h4>
+                         <div id="naol4">
+                      
+                       
+                          <h:selectOneRadio value="#{orders.shoefive}">                        
+                        
+                        <f:selectItem itemValue="Nike Air Jordan XXVII 41" itemLabel="41"/>
+                        <f:selectItem itemValue="Nike Air Jordan XXVII 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                           <label  class="usernamey">username:</label>
+                        <h:inputText  class="input1" value="#{orders.userfive}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.addressfive}"></h:inputText>
+                        <br></br>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.sixth()}"/>
+                      
+                                
+                       </div>
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                   <h:commandButton class="btn1" value="Add To Cart"/>
+                   <p class="btn1" onclick="mynaol4()">buy</p>
                     </div>
                 </div>
                 <div class="pro">
@@ -174,31 +289,65 @@ background: linear-gradient(lightgray);
                      
                        <div class="carddes">
                           
-                          <h4><b>Nike Air Max Plus</b></h4>
-                          <h4>41</h4>
+                          <h4><b>Nike Air Max Plus        4300birr</b></h4>
+                         <div id="naol5">
+                      
+                       
+                          <h:selectOneRadio value="#{orders.shoesix}">                        
+                        
+                        <f:selectItem itemValue="Nike Air Max Plus 41" itemLabel="41"/>
+                        <f:selectItem itemValue="Nike Air Max Plus 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                           <label  class="usernamey">username:</label>
+                        <h:inputText  class="input1" value="#{orders.usersix}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.addresssix}"></h:inputText>
+                        <br></br>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.seventh()}"/>
+                      
+                                
+                       </div>
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                   <h:commandButton class="btn1" value="Add To Cart"/>
+                   <p class="btn1" onclick="mynaol5()">buy</p>
                     </div>
                 </div>
                 
                     </div>
-            </h:form>
+           
             
-            <h:form class="formms">
+           
                 <div class="prods">
                 <div class="pro">
                     <img class="pimg" src="folder/images/shoesimg/nikefreemetcon.jpg" width="300px" height="450px" alt="alt"/>
                     
                        <div class="carddes">
                           
-                          <h4><b>Nike Free Metcon</b></h4>
-                          <h4>41</h4>
+                          <h4><b>Nike Free Metcon     2300birr</b></h4>
+                        <div id="naol6">
+                      
+                       
+                          <h:selectOneRadio value="#{orders.shoeseven}">                        
+                        
+                        <f:selectItem itemValue="Nike Free Metcon 41" itemLabel="41"/>
+                        <f:selectItem itemValue="Nike Free Metcon 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                           <label  class="usernamey">username:</label>
+                        <h:inputText  class="input1" value="#{orders.userseven}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.addressseven}"></h:inputText>
+                        <br></br>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.eightth()}"/>
+                       
+                                
+                       </div>
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                   <h:commandButton class="btn1" value="Add To Cart"/>
+                   <p class="btn1" onclick="mynaol6()">buy</p>
                     </div>
                 </div>
                 <div class="pro">
@@ -206,12 +355,29 @@ background: linear-gradient(lightgray);
                      
                       <div class="carddes">
                           
-                          <h4><b>Nike Invincible</b></h4>
-                          <h4>41</h4>
+                          <h4><b>Nike Invincible      4300birr</b></h4>
+                       <div id="naol7">
+                      
+                       
+                          <h:selectOneRadio value="#{orders.shoeeight}">                        
+                        
+                        <f:selectItem itemValue="Nike Invincible 41" itemLabel="41"/>
+                        <f:selectItem itemValue="Nike Invincible 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                           <label  class="usernamey">username:</label>
+                        <h:inputText  class="input1" value="#{orders.usereight}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.addresseight}"></h:inputText>
+                        <br></br>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.nineth()}"/>
+                      
+                                
+                       </div>
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                   <h:commandButton class="btn1" value="Add To Cart"/>
+                   <p class="btn1" onclick="mynaol7()">buy</p>
                     </div>
                 </div>
                 <div class="pro">
@@ -219,12 +385,29 @@ background: linear-gradient(lightgray);
                      
                         <div class="carddes">
                           
-                          <h4><b>Nike Pegasus</b></h4>
-                          <h4>41</h4>
+                          <h4><b>Nike Pegasus     3700birr</b></h4>
+                         <div id="naol8">
+                      
+                       
+                          <h:selectOneRadio value="#{orders.shoeone}">                        
+                        
+                        <f:selectItem itemValue="Nike Pegasus 41" itemLabel="41"/>
+                        <f:selectItem itemValue="Nike Pegasus 42" itemLabel="42"/>
+   		       </h:selectOneRadio>
+                           <label  class="usernamey">username:</label>
+                        <h:inputText  class="input1" value="#{orders.userone}"></h:inputText>
+                        <br></br>
+                        <label  class="usernamey">address:</label>
+                        <h:inputText class="input1" value="#{orders.addressone}"></h:inputText>
+                        <br></br>
+                        <h:commandButton class="btn1" value="Buy Now" action="#{orders.second()}"/>
+                       
+                                
+                       </div>
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla, ligula eget vestibulum venenatis</p>
                     
                     
-                   <h:commandButton class="btn1" value="Add To Cart"/>
+                   <p class="btn1" onclick="mynaol8()">buy</p>
                     </div>
                 </div>
                 
@@ -236,7 +419,35 @@ background: linear-gradient(lightgray);
             
             
         </div>
-        
+        <script>
+function mynaol() {
+  document.getElementById("naol").style.display = "block";
+}
+function mynaol1() {
+  document.getElementById("naol1").style.display = "block";
+}
+function mynaol2() {
+  document.getElementById("naol2").style.display = "block";
+}
+function mynaol3() {
+  document.getElementById("naol3").style.display = "block";
+}
+function mynaol4() {
+  document.getElementById("naol4").style.display = "block";
+}
+function mynaol5() {
+  document.getElementById("naol5").style.display = "block";
+}
+function mynaol6() {
+  document.getElementById("naol6").style.display = "block";
+}
+function mynaol7() {
+  document.getElementById("naol7").style.display = "block";
+}
+function mynaol8() {
+  document.getElementById("naol8").style.display = "block";
+}
+</script>
     </h:body>
 </html>
 

@@ -110,7 +110,11 @@ public class Insertreg {
         }
       
     }
-      public void viewUser(){
+      public static String deleteUser(String username){
+          
+        System.out.println("deleted");
+        return "/signup.xhtml?faces-redirect=true";
+    
           
       }
    

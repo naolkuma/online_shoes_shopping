@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>update user</title>
+        <link rel="stylesheet" href="styles.css"></link>
+        <style>
+            .inp{
+                margin-right: 20px;
+            }
+            .btn4 {
+  -webkit-border-radius: 22;
+  -moz-border-radius: 22;
+  border-radius: 22px;
+  -webkit-box-shadow: 5px 6px 7px #666666;
+  -moz-box-shadow: 5px 6px 7px #666666;
+  box-shadow: 5px 6px 7px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #000000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn4:hover {
+  background: #fc3c3c;
+  text-decoration: none;
+}
+        </style>
+    </h:head>
+    <h:body>
+         <div class="header">
+            <div class="header1">
+                <h2 class="shoesifytext">Shoesify</h2>
+            </div>
+            <div class="header2">
+                <a class="anchor-link" href="index.xhtml">Home</a>
+                
+            </div>
+         </div>
+        <div class="loginbody">
+            <div class="imgdiv">
+                <img class="img2" src="folder/images/wallpaperflare.com_wallpaper (49).jpg"></img> 
+            </div>
+            <div class="inputfname">
+                <fieldset class="fieldset1">
+                    
+            <h:form>
+            <label  class="username">username:</label>
+          <h:inputText class="inp" value="#{update.username}"></h:inputText>
+          <br></br>
+           <label  class="username">email:</label>
+          <h:inputText class="inp" value="#{update.email}"></h:inputText>
+          <br></br>
+           <label  class="username">address:</label>
+          <h:inputText class="inp" value="#{update.address}"></h:inputText>
+          <br></br>
+           <label  class="username">phoneno:</label>
+          <h:inputText class="inp" value="#{update.phoneno}"></h:inputText>
+          <br></br>
+        <h:commandButton class="btn4" value="update" action="#{update.updateUser()}"></h:commandButton>   
+        </h:form>
+                    
+            </fieldset>
+               
+            </div>        
+        </div>
+       
+       
+    </h:body>
+</html>
+

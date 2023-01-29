@@ -68,18 +68,7 @@ public class LoginBean {
                     }
                     else
                     {
-                        try{
-                       String sq="insert into ORDERTABLE(USERNAME, ADDRESS) values(?, ?)";
-                        PreparedStatement stmn=con.prepareStatement(sq);
-                        
-            stmn.setString(1, username1);
-            stmn.setString(2,address);
-            
-            stmn.execute();
-            
-                        }
-                        catch(Exception e){
-                        }
+                       
                       return "orderpage.xhtml";
                     }
                     
