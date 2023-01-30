@@ -9,6 +9,11 @@
     <h:head>
         <title>signup</title>
         <link rel="stylesheet" href="styles.css"></link>
+        <style>
+            .error{
+                color: red;
+            }
+        </style>
     </h:head>
     <h:body>
        <div class="header">
@@ -30,32 +35,42 @@
                         <label class="text">Register</label>
                         <br></br>
                          <label  class="username">Email address</label>                        
-                         <h:inputText id="input1" class="input1" value="#{insertreg.email}"/>
+                         <h:inputText id="input1" class="input1" value="#{insertreg.email}"   required="true" validatorMessage="invalid Emailaddress"><f:validateRegex
+    pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" /></h:inputText>
+                        
+                        <h:message for="input1" styleClass="error"/>
                          <br></br>
                         <label  class="username">credit-card no:</label>                        
-                        <h:inputText id="input2" class="input1" value="#{insertreg.creditcardno}"/>
-                         <br></br>  
+                        <h:inputText id="input2" class="input1" value="#{insertreg.creditcardno}" required="true" requiredMessage="creditcard no is mandatory"/>
+                         <h:message for="input2" styleClass="error"/>
+                        <br></br>  
                          <label  class="username">credit-card password:</label>                         
-                        <h:inputSecret class="input1" maxlength="12" ></h:inputSecret> 
+                         <h:inputSecret id="input4" class="input1" maxlength="12" required="true" requiredMessage="Error"></h:inputSecret> 
+                        <h:message for="input4" styleClass="error"/>
                         <br></br>
                         <label  class="username">address:</label>                        
-                        <h:inputText id="input3" class="input1" value="#{insertreg.address}"/>
-                         <br></br>  
+                        <h:inputText id="input3" class="input1" value="#{insertreg.address}" required="true" requiredMessage="address is mandatory"/>
+                         <h:message for="input3" styleClass="error"/>
+                        <br></br>  
                          <label  class="username">gender:</label> 
-                         <h:selectOneRadio class="text2" value="#{insertreg.gender}">                        
+                         <h:selectOneRadio id="input8" class="text2" value="#{insertreg.gender}" required="true" requiredMessage="Choose one gender">                        
                         <f:selectItem itemValue="male" itemLabel="male" />
    			<f:selectItem itemValue="female" itemLabel="female" />
    		       </h:selectOneRadio>
+                         <h:message for="input8" styleClass="error"/>
                          <br></br>
                         <label  class="username">phone number:</label>                         
-                        <h:inputText id="input5" class="input1" value="#{insertreg.phoneno}"/>
-                         <br></br>
+                        <h:inputText id="input5" class="input1" value="#{insertreg.phoneno}" maxlength="10" required="true" requiredMessage="phoneno must consist atleast 10 digits"/>
+                         <h:message for="input5" styleClass="error"/>
+                        <br></br>
                         <label  class="username">username:</label>                         
-                        <h:inputText id="input6" class="input1" value="#{insertreg.username}"/>
+                        <h:inputText id="input6" class="input1" value="#{insertreg.username}" required="true" requiredMessage="username is mandatory"/>
+                        <h:message for="input6" styleClass="error"/>
                          <br></br>
                         <label class="username">password:</label>                         
-                        <h:inputSecret class="input1" maxlength="12" value="#{insertreg.password}"></h:inputSecret>
-                         <br></br>
+                        <h:inputSecret id="input7" class="input1" maxlength="12" value="#{insertreg.password}" required="true" requiredMessage="password is mandatory"></h:inputSecret>
+                         <h:message for="input7" styleClass="error"/>
+                        <br></br>
                          <h:commandButton class="sbmtbtn" value="Sign Up" action="#{insertreg.addUser}"/>  
                     </h:form> 
                 </fieldset>
