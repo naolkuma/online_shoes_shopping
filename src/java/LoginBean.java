@@ -3,11 +3,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Map;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 @ManagedBean
+@SessionScoped
 public class LoginBean {
     private String username1;
     private String password1;
@@ -62,6 +66,10 @@ public class LoginBean {
         mystmn.setString(1, username1);
         ResultSet rs = mystmn.executeQuery();
             rs.next();
+            FacesContext facesContext=FacesContext.getCurrentInstance();
+                ExternalContext external=facesContext.getExternalContext();
+                Map<String,Object>sessionMap=external.getSessionMap();
+                sessionMap.put("user",rs.getString(6));
             String uservalid=rs.getString(1);
                     if("naol".equals(uservalid)){
                       return "adminpage.xhtml";

@@ -2,8 +2,11 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Map;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -15,52 +18,46 @@ import javax.faces.bean.SessionScoped;
  * @author Naol
  */
 @ManagedBean
+@SessionScoped
 
 public class Orders {
-    public Orders(){}
+    
     private String shoe;
-    private String username1;
+    
 private String address;
 
-private String userone;
+
 private String addressone;
 private String shoeone;
 
-private String usertwo;
+
 private String addresstwo;
 private String shoetwo;
 
-private String userthree;
+
 private String addressthree;
 private String shoethree;
 
-private String userfour;
+
 private String addressfour;
 private String shoefour;
 
-private String userfive;
+
 private String addressfive;
 private String shoefive;
 
-private String usersix;
+
 private String addresssix;
 private String shoesix;
 
-private String userseven;
+
 private String addressseven;
 private String shoeseven;
 
-private String usereight;
+
 private String addresseight;
 private String shoeeight;
 
-    public String getUsertwo() {
-        return usertwo;
-    }
-
-    public void setUsertwo(String usertwo) {
-        this.usertwo = usertwo;
-    }
 
     public String getAddresstwo() {
         return addresstwo;
@@ -78,13 +75,7 @@ private String shoeeight;
         this.shoetwo = shoetwo;
     }
 
-    public String getUserthree() {
-        return userthree;
-    }
-
-    public void setUserthree(String userthree) {
-        this.userthree = userthree;
-    }
+    
 
     public String getAddressthree() {
         return addressthree;
@@ -102,13 +93,7 @@ private String shoeeight;
         this.shoethree = shoethree;
     }
 
-    public String getUserfour() {
-        return userfour;
-    }
-
-    public void setUserfour(String userfour) {
-        this.userfour = userfour;
-    }
+   
 
     public String getAddressfour() {
         return addressfour;
@@ -126,13 +111,7 @@ private String shoeeight;
         this.shoefour = shoefour;
     }
 
-    public String getUserfive() {
-        return userfive;
-    }
-
-    public void setUserfive(String userfive) {
-        this.userfive = userfive;
-    }
+  
 
     public String getAddressfive() {
         return addressfive;
@@ -150,13 +129,7 @@ private String shoeeight;
         this.shoefive = shoefive;
     }
 
-    public String getUsersix() {
-        return usersix;
-    }
-
-    public void setUsersix(String usersix) {
-        this.usersix = usersix;
-    }
+   
 
     public String getAddresssix() {
         return addresssix;
@@ -174,13 +147,6 @@ private String shoeeight;
         this.shoesix = shoesix;
     }
 
-    public String getUserseven() {
-        return userseven;
-    }
-
-    public void setUserseven(String userseven) {
-        this.userseven = userseven;
-    }
 
     public String getAddressseven() {
         return addressseven;
@@ -198,13 +164,7 @@ private String shoeeight;
         this.shoeseven = shoeseven;
     }
 
-    public String getUsereight() {
-        return usereight;
-    }
 
-    public void setUsereight(String usereight) {
-        this.usereight = usereight;
-    }
 
     public String getAddresseight() {
         return addresseight;
@@ -224,14 +184,6 @@ private String shoeeight;
 
 
 
-
-    public String getUserone() {
-        return userone;
-    }
-
-    public void setUserone(String userone) {
-        this.userone = userone;
-    }
 
     public String getAddressone() {
         return addressone;
@@ -267,12 +219,14 @@ private String shoeeight;
     }
     
 
-    public String getUsername1() {
-        return username1;
-    }
+  String username1;
+FacesContext facesContext = FacesContext.getCurrentInstance();
+ExternalContext externalContext = facesContext.getExternalContext();
+Map<String,Object> sessionMap = externalContext.getSessionMap();
 
-    public void setUsername1(String username1) {
-        this.username1 = username1;
+public Orders(){
+    
+    username1=(String) sessionMap.get("user");
     }
    
     public void addOrders() throws ClassNotFoundException, SQLException{
@@ -305,7 +259,7 @@ private String shoeeight;
                        String sqll="insert into ORDERTABLE(USERNAME, ADDRESS, ORDERS) values(?, ?, ?)";
                        PreparedStatement tstmn=con.prepareStatement(sqll);
                         
-            tstmn.setString(1, userone);
+            tstmn.setString(1, username1);
             tstmn.setString(2,addressone);
             tstmn.setString(3,shoeone);
 
@@ -326,7 +280,7 @@ private String shoeeight;
                        String sqll="insert into ORDERTABLE(USERNAME, ADDRESS, ORDERS) values(?, ?, ?)";
                        PreparedStatement tstmn=con.prepareStatement(sqll);
                         
-            tstmn.setString(1, usertwo);
+            tstmn.setString(1, username1);
             tstmn.setString(2,addresstwo);
             tstmn.setString(3,shoetwo);
 
@@ -350,7 +304,7 @@ private String shoeeight;
                        String sqll="insert into ORDERTABLE(USERNAME, ADDRESS, ORDERS) values(?, ?, ?)";
                        PreparedStatement tstmn=con.prepareStatement(sqll);
                         
-            tstmn.setString(1, userthree);
+            tstmn.setString(1, username1);
             tstmn.setString(2,addressthree);
             tstmn.setString(3,shoethree);
 
@@ -373,7 +327,7 @@ private String shoeeight;
                        String sqll="insert into ORDERTABLE(USERNAME, ADDRESS, ORDERS) values(?, ?, ?)";
                        PreparedStatement tstmn=con.prepareStatement(sqll);
                         
-            tstmn.setString(1, userfour);
+            tstmn.setString(1, username1);
             tstmn.setString(2,addressfour);
             tstmn.setString(3,shoefour);
 
@@ -397,7 +351,7 @@ private String shoeeight;
                        String sqll="insert into ORDERTABLE(USERNAME, ADDRESS, ORDERS) values(?, ?, ?)";
                        PreparedStatement tstmn=con.prepareStatement(sqll);
                         
-            tstmn.setString(1, userfive);
+            tstmn.setString(1, username1);
             tstmn.setString(2,addressfive);
             tstmn.setString(3,shoefive);
 
@@ -418,7 +372,7 @@ private String shoeeight;
                        String sqll="insert into ORDERTABLE(USERNAME, ADDRESS, ORDERS) values(?, ?, ?)";
                        PreparedStatement tstmn=con.prepareStatement(sqll);
                         
-            tstmn.setString(1, usersix);
+            tstmn.setString(1, username1);
             tstmn.setString(2,addresssix);
             tstmn.setString(3,shoesix);
 
@@ -442,7 +396,7 @@ private String shoeeight;
                        String sqll="insert into ORDERTABLE(USERNAME, ADDRESS, ORDERS) values(?, ?, ?)";
                        PreparedStatement tstmn=con.prepareStatement(sqll);
                         
-            tstmn.setString(1, userseven);
+            tstmn.setString(1, username1);
             tstmn.setString(2,addressseven);
             tstmn.setString(3,shoeseven);
 
@@ -464,7 +418,7 @@ private String shoeeight;
                        String sqll="insert into ORDERTABLE(USERNAME, ADDRESS, ORDERS) values(?, ?, ?)";
                        PreparedStatement tstmn=con.prepareStatement(sqll);
                         
-            tstmn.setString(1, usereight);
+            tstmn.setString(1, username1);
             tstmn.setString(2,addresseight);
             tstmn.setString(3,shoeeight);
 
